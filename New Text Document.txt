@@ -1,0 +1,7 @@
+(Get-Content C:\Setup.zip)
+
+$base64string = [Convert]::ToBase64String([IO.File]::ReadAllBytes('C:\Setup.zip'))
+
+$base64string | Out-File TempData.log
+
+notepad.exe TempData.log
